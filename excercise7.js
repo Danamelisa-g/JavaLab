@@ -7,9 +7,18 @@ Debe contener al menos un número.
 Si cumple con ambas, retornar "Contraseña válida", de lo contrario "Contraseña no válida".
 */
 function validarContrasena(contrasena) {
-    // TODO: Resolver
-}
+    // Verifica si la contraseña tiene al menos 8 caracteres
+    if (contrasena.length < 8) {
+        return "Contraseña no válida";
+    } 
 
+    // Verifica si la contraseña contiene al menos un número
+    if (/\d/.test(contrasena)) {
+        return "Contraseña válida";
+    } else {
+        return "Contraseña no válida";
+    }
+}
 console.log("-----------------------------------")
 console.log("EJERCICIO 7")
 console.log("-----------------------------------")
